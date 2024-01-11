@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Iconscout Link For Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Task Manager</a></li>
+      <li style="float:right"><a href="addTask.html">Add Task</a></li>
+      <li style="float:right"><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<body>
+  <main class="main-container">
+
+    <div class="name">
+      <h3>
+        What's up, <input type="text" id="name" placeholder="Name here">
+      </h3>
+    </div>
+  </main>
+
+  <div class="test">
+    <div class="wrapper">
+      <div class="task-input">
+        <span class="active" id="all">Title:</span>
+        <input type="text" id="taskName" placeholder="Add a new task">
+        <span class="active" id="all">Description:</span>
+        <input type="text" id="description" placeholder="Description" id="description">
+        <span class="active" id="all">Due-date:</span>
+        <input type="date" id="dueDate" required style="text-transform: uppercase;">
+        <span class="active" id="all">Priority:</span>
+        <select id="priority" required>
+          <option value="low">Low </option>
+          <option value="medium">Medium </option>
+          <option value="high">High </option>
+        </select></br></br>
+        <button id="submitButton" onclick="addOrUpdateTask()">Submit</button>
+      </div>
+    </div>
+
+    <div class="wrapper2">
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
